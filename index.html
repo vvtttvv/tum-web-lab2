@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MassageWay - Masaj Terapeutic Profesional</title>
 
-    <meta name="description" content="MassageWay — salon de masaj terapeutic profesional. Masaj clasic, curativ, terapeutic, anticelulitic, cu miere, creol, cu ventuze. Programează o ședință acum!" />
-    <meta name="keywords" content="masaj, masaj terapeutic, masaj clasic, masaj curativ, masaj anticelulitic, masaj cu miere, masaj creol, masaj cu ventuze, relaxare, wellness" />
+    <meta name="description" content="MassageWay — salon de masaj terapeutic profesional. Masaj suedez, profund, cu pietre calde, aromaterapie și multe altele. Programează o ședință acum!" />
+    <meta name="keywords" content="masaj, masaj terapeutic, relaxare, wellness, masaj suedez, masaj profund, aromaterapie, reflexoterapie" />
     <meta name="author" content="MassageWay" />
 
     <meta property="og:type" content="website" />
@@ -17,7 +17,7 @@
     <meta property="og:locale" content="ro_RO" />
     <meta property="og:locale:alternate" content="ru_RU" />
 
-    <link rel="icon" type="image/png" href="./mock/images/image.png" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💆</text></svg>" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -48,7 +48,7 @@
           @apply no-underline text-dark font-medium transition-colors duration-300 hover:text-primary;
         }
         .service-card {
-          @apply bg-white w-[300px] p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5;
+          @apply bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5;
         }
         .card-img {
           @apply w-[200px] h-[200px] rounded-full mx-auto;
@@ -125,78 +125,76 @@
       <div class="container-main">
         <h2 class="section-title mb-12" data-i18n="services.title">Serviciile noastre</h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <article class="service-card">
-            <img src="./mock/images/img1.jpg" alt="Masaj clasic" class="card-img" data-i18n-alt="services.s1.alt" />
-            <h3 class="card-title" data-i18n="services.s1.name">Masaj Clasic — 250 lei</h3>
+            <img src="./mock/images/img1.png" alt="Masaj suedez" class="card-img" data-i18n-alt="services.s1.alt" />
+            <h3 class="card-title" data-i18n="services.s1.name">Masaj Suedez</h3>
             <p data-i18n="services.s1.desc">
-              Masaj clasic pentru întreg corpul, cu mișcări lungi și fluide,
+              Un masaj clasic pentru întreg corpul, cu mișcări lungi și fluide,
               pentru relaxare profundă și eliminarea stresului.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img2.jpg" alt="Masaj curativ" class="card-img" data-i18n-alt="services.s2.alt" />
-            <h3 class="card-title" data-i18n="services.s2.name">Masaj Curativ — preț variabil</h3>
+            <img src="./mock/images/img2.png" alt="Masaj profund" class="card-img" data-i18n-alt="services.s2.alt" />
+            <h3 class="card-title" data-i18n="services.s2.name">Masaj Profund</h3>
             <p data-i18n="services.s2.desc">
-              Masaj terapeutic adaptat individual, cu tehnici speciale pentru
-              ameliorarea durerilor și recuperarea funcțională. Prețul variază
-              în funcție de complexitatea ședinței.
+              Presiune aplicată pe straturile musculare profunde pentru a elibera
+              tensiunea cronică și a ameliora durerea persistentă.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img3.jpg" alt="Masaj terapeutic" class="card-img" data-i18n-alt="services.s3.alt" />
-            <h3 class="card-title" data-i18n="services.s3.name">Masaj Terapeutic — 300 lei</h3>
+            <img src="./mock/images/img3.png" alt="Terapie cu pietre calde" class="card-img" data-i18n-alt="services.s3.alt" />
+            <h3 class="card-title" data-i18n="services.s3.name">Pietre Calde</h3>
             <p data-i18n="services.s3.desc">
-              Presiune aplicată pe zonele cu tensiune musculară pentru a restabili
-              mobilitatea, a reduce durerea și a îmbunătăți starea generală.
+              Pietre netede încălzite, plasate pe puncte cheie, pentru a topi
+              tensiunea și a îmbunătăți circulația.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img4.jpg" alt="Masaj anticelulitic" class="card-img" data-i18n-alt="services.s4.alt" />
-            <h3 class="card-title" data-i18n="services.s4.name">Masaj Anticelulitic — 350 lei</h3>
+            <img src="./mock/images/img4.png" alt="Aromaterapie" class="card-img" data-i18n-alt="services.s4.alt" />
+            <h3 class="card-title" data-i18n="services.s4.name">Aromaterapie</h3>
             <p data-i18n="services.s4.desc">
-              Tehnici intensive de masaj care stimulează circulația, reduc
-              aspectul celulitei și îmbunătățesc textura pielii.
+              Uleiuri esențiale combinate cu tehnici delicate de masaj pentru a
+              echilibra mintea, corpul și spiritul.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img5.jpg" alt="Masaj cu miere" class="card-img" data-i18n-alt="services.s5.alt" />
-            <h3 class="card-title" data-i18n="services.s5.name">Masaj cu Miere — 300 lei</h3>
+            <img src="./mock/images/img5.png" alt="Masaj sportiv" class="card-img" data-i18n-alt="services.s5.alt" />
+            <h3 class="card-title" data-i18n="services.s5.name">Masaj Sportiv</h3>
             <p data-i18n="services.s5.desc">
-              Masaj cu miere naturală care detoxifică pielea, îmbunătățește
-              circulația și lasă pielea catifelată și hrănită.
+              Conceput pentru persoanele active, pentru a preveni accidentările,
+              a îmbunătăți performanța și a accelera recuperarea.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img6.jpg" alt="Masaj creol" class="card-img" data-i18n-alt="services.s6.alt" />
-            <h3 class="card-title" data-i18n="services.s6.name">Masaj Creol — 300 lei</h3>
+            <img src="./mock/images/img6.png" alt="Masaj thailandez" class="card-img" data-i18n-alt="services.s6.alt" />
+            <h3 class="card-title" data-i18n="services.s6.name">Masaj Thailandez</h3>
             <p data-i18n="services.s6.desc">
-              Masaj energizant cu bețișoare de bambus care stimulează circulația,
-              tonifică mușchii și elimină toxinele din organism.
+              Tehnici ancestrale de stretching și presiune pentru a îmbunătăți
+              flexibilitatea, fluxul de energie și vitalitatea.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img7.jpg" alt="Masaj cu ventuze" class="card-img" data-i18n-alt="services.s7.alt" />
-            <h3 class="card-title" data-i18n="services.s7.name">Masaj cu Ventuze — preț variabil</h3>
+            <img src="./mock/images/img7.png" alt="Masaj pentru cupluri" class="card-img" data-i18n-alt="services.s7.alt" />
+            <h3 class="card-title" data-i18n="services.s7.name">Masaj pentru Cupluri</h3>
             <p data-i18n="services.s7.desc">
-              Terapie cu ventuze care îmbunătățește circulația sanguină, reduce
-              tensiunea musculară și accelerează procesul de vindecare.
-              Prețul variază în funcție de zona tratată.
+              O experiență de relaxare împreună într-o suită privată — perfectă
+              pentru partenerii care caută liniște.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img8.jpg" alt="Reduceri la masaje" class="card-img" data-i18n-alt="services.s8.alt" />
-            <h3 class="card-title" data-i18n="services.s8.name">Oferte & Reduceri</h3>
+            <img src="./mock/images/img8.png" alt="Reflexoterapie" class="card-img" data-i18n-alt="services.s8.alt" />
+            <h3 class="card-title" data-i18n="services.s8.name">Reflexoterapie</h3>
             <p data-i18n="services.s8.desc">
-              La unele masaje sunt posibile reduceri! Sunați-ne pentru detalii
-              și vă vom oferi cea mai bună ofertă adaptată nevoilor dvs.
+              Masaj concentrat pe tălpi, vizând punctele de presiune pentru a
+              restabili echilibrul și a promova vindecarea naturală.
             </p>
           </article>
         </div>
@@ -220,19 +218,15 @@
       <div class="container-main">
         <h2 class="section-title mb-3.5" data-i18n="contact.title">Programează o întâlnire</h2>
 
-        <p class="text-center mb-10 text-muted" data-i18n="contact.subtitle">Contactează-ne pentru a programa ședința perfectă pentru tine.</p>
+        <p class="text-center mb-10 text-muted" data-i18n="contact.subtitle">Lasă-ne datele tale și vom programa ședința perfectă pentru tine.</p>
 
-        <div class="max-w-[500px] mx-auto flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="tel:+37379720592" class="flex items-center gap-3 bg-primary text-white py-4 px-8 rounded-full no-underline font-semibold text-lg transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
-            <span data-i18n="contact.call">Sună: +373 797 20 592</span>
-          </a>
+        <form class="max-w-[450px] mx-auto grid gap-3.5">
+          <input type="text" placeholder="Numele tău" required class="form-input" data-i18n-placeholder="contact.name" />
+          <input type="tel" placeholder="Număr de telefon" required class="form-input" data-i18n-placeholder="contact.phone" />
+          <textarea placeholder="Serviciul preferat sau un mesaj" class="form-input min-h-[120px] resize-y" data-i18n-placeholder="contact.message"></textarea>
 
-          <a href="https://wa.me/37379720592" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-[#25D366] text-white py-4 px-8 rounded-full no-underline font-semibold text-lg transition-all duration-300 hover:bg-[#1da851] hover:-translate-y-0.5">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <span data-i18n="contact.whatsapp">WhatsApp</span>
-          </a>
-        </div>
+          <button type="submit" class="btn-primary text-base cursor-pointer" data-i18n="contact.btn">Programează acum</button>
+        </form>
       </div>
     </section>
 
@@ -256,39 +250,41 @@
           'about.title': 'Despre MassageWay',
           'about.text': 'MassageWay este un refugiu de liniște care oferă masaj terapeutic profesional, tratamente corporale și servicii holistice de wellness, adaptate nevoilor tale individuale.',
           'services.title': 'Serviciile noastre',
-          'services.s1.name': 'Masaj Clasic — 250 lei',
-          'services.s1.desc': 'Masaj clasic pentru întreg corpul, cu mișcări lungi și fluide, pentru relaxare profundă și eliminarea stresului.',
-          'services.s1.alt': 'Masaj clasic',
-          'services.s2.name': 'Masaj Curativ — preț variabil',
-          'services.s2.desc': 'Masaj terapeutic adaptat individual, cu tehnici speciale pentru ameliorarea durerilor și recuperarea funcțională. Prețul variază în funcție de complexitatea ședinței.',
-          'services.s2.alt': 'Masaj curativ',
-          'services.s3.name': 'Masaj Terapeutic — 300 lei',
-          'services.s3.desc': 'Presiune aplicată pe zonele cu tensiune musculară pentru a restabili mobilitatea, a reduce durerea și a îmbunătăți starea generală.',
-          'services.s3.alt': 'Masaj terapeutic',
-          'services.s4.name': 'Masaj Anticelulitic — 350 lei',
-          'services.s4.desc': 'Tehnici intensive de masaj care stimulează circulația, reduc aspectul celulitei și îmbunătățesc textura pielii.',
-          'services.s4.alt': 'Masaj anticelulitic',
-          'services.s5.name': 'Masaj cu Miere — 300 lei',
-          'services.s5.desc': 'Masaj cu miere naturală care detoxifică pielea, îmbunătățește circulația și lasă pielea catifelată și hrănită.',
-          'services.s5.alt': 'Masaj cu miere',
-          'services.s6.name': 'Masaj Creol — 300 lei',
-          'services.s6.desc': 'Masaj energizant cu bețișoare de bambus care stimulează circulația, tonifică mușchii și elimină toxinele din organism.',
-          'services.s6.alt': 'Masaj creol',
-          'services.s7.name': 'Masaj cu Ventuze — preț variabil',
-          'services.s7.desc': 'Terapie cu ventuze care îmbunătățește circulația sanguină, reduce tensiunea musculară și accelerează procesul de vindecare. Prețul variază în funcție de zona tratată.',
-          'services.s7.alt': 'Masaj cu ventuze',
-          'services.s8.name': 'Oferte & Reduceri',
-          'services.s8.desc': 'La unele masaje sunt posibile reduceri! Sunați-ne pentru detalii și vă vom oferi cea mai bună ofertă adaptată nevoilor dvs.',
-          'services.s8.alt': 'Reduceri la masaje',
+          'services.s1.name': 'Masaj Suedez',
+          'services.s1.desc': 'Un masaj clasic pentru întreg corpul, cu mișcări lungi și fluide, pentru relaxare profundă și eliminarea stresului.',
+          'services.s1.alt': 'Masaj suedez',
+          'services.s2.name': 'Masaj Profund',
+          'services.s2.desc': 'Presiune aplicată pe straturile musculare profunde pentru a elibera tensiunea cronică și a ameliora durerea persistentă.',
+          'services.s2.alt': 'Masaj profund',
+          'services.s3.name': 'Pietre Calde',
+          'services.s3.desc': 'Pietre netede încălzite, plasate pe puncte cheie, pentru a topi tensiunea și a îmbunătăți circulația.',
+          'services.s3.alt': 'Terapie cu pietre calde',
+          'services.s4.name': 'Aromaterapie',
+          'services.s4.desc': 'Uleiuri esențiale combinate cu tehnici delicate de masaj pentru a echilibra mintea, corpul și spiritul.',
+          'services.s4.alt': 'Aromaterapie',
+          'services.s5.name': 'Masaj Sportiv',
+          'services.s5.desc': 'Conceput pentru persoanele active, pentru a preveni accidentările, a îmbunătăți performanța și a accelera recuperarea.',
+          'services.s5.alt': 'Masaj sportiv',
+          'services.s6.name': 'Masaj Thailandez',
+          'services.s6.desc': 'Tehnici ancestrale de stretching și presiune pentru a îmbunătăți flexibilitatea, fluxul de energie și vitalitatea.',
+          'services.s6.alt': 'Masaj thailandez',
+          'services.s7.name': 'Masaj pentru Cupluri',
+          'services.s7.desc': 'O experiență de relaxare împreună într-o suită privată — perfectă pentru partenerii care caută liniște.',
+          'services.s7.alt': 'Masaj pentru cupluri',
+          'services.s8.name': 'Reflexoterapie',
+          'services.s8.desc': 'Masaj concentrat pe tălpi, vizând punctele de presiune pentru a restabili echilibrul și a promova vindecarea naturală.',
+          'services.s8.alt': 'Reflexoterapie',
           'why.title': 'De ce să ne alegi?',
           'why.r1': 'Terapeuți certificați și cu experiență',
           'why.r2': 'Atmosferă calmă și liniștită',
           'why.r3': 'Planuri de tratament personalizate',
           'why.r4': 'Uleiuri și produse organice premium',
           'contact.title': 'Programează o întâlnire',
-          'contact.subtitle': 'Contactează-ne pentru a programa ședința perfectă pentru tine.',
-          'contact.call': 'Sună: +373 797 20 592',
-          'contact.whatsapp': 'WhatsApp',
+          'contact.subtitle': 'Lasă-ne datele tale și vom programa ședința perfectă pentru tine.',
+          'contact.name': 'Numele tău',
+          'contact.phone': 'Număr de telefon',
+          'contact.message': 'Serviciul preferat sau un mesaj',
+          'contact.btn': 'Programează acum',
           'footer.text': '© 2026 MassageWay. Toate drepturile rezervate.',
         },
         ru: {
@@ -303,39 +299,41 @@
           'about.title': 'О MassageWay',
           'about.text': 'MassageWay — это тихий уголок, предлагающий профессиональный лечебный массаж, процедуры для тела и холистические велнес-услуги, адаптированные под ваши индивидуальные потребности.',
           'services.title': 'Наши услуги',
-          'services.s1.name': 'Классический массаж — 250 лей',
+          'services.s1.name': 'Шведский массаж',
           'services.s1.desc': 'Классический массаж всего тела с длинными плавными движениями для глубокого расслабления и снятия стресса.',
-          'services.s1.alt': 'Классический массаж',
-          'services.s2.name': 'Лечебный массаж — цена варьируется',
-          'services.s2.desc': 'Индивидуальный терапевтический массаж со специальными техниками для снятия болей и функционального восстановления. Цена зависит от сложности сеанса.',
-          'services.s2.alt': 'Лечебный массаж',
-          'services.s3.name': 'Терапевтический массаж — 300 лей',
-          'services.s3.desc': 'Воздействие на зоны мышечного напряжения для восстановления подвижности, уменьшения боли и улучшения общего состояния.',
-          'services.s3.alt': 'Терапевтический массаж',
-          'services.s4.name': 'Антицеллюлитный массаж — 350 лей',
-          'services.s4.desc': 'Интенсивные массажные техники, стимулирующие кровообращение, уменьшающие проявления целлюлита и улучшающие текстуру кожи.',
-          'services.s4.alt': 'Антицеллюлитный массаж',
-          'services.s5.name': 'Массаж с мёдом — 300 лей',
-          'services.s5.desc': 'Массаж с натуральным мёдом, который выводит токсины, улучшает кровообращение и делает кожу бархатистой и ухоженной.',
-          'services.s5.alt': 'Массаж с мёдом',
-          'services.s6.name': 'Креольский массаж — 300 лей',
-          'services.s6.desc': 'Энергичный массаж бамбуковыми палочками, стимулирующий кровообращение, тонизирующий мышцы и выводящий токсины из организма.',
-          'services.s6.alt': 'Креольский массаж',
-          'services.s7.name': 'Вакуумный массаж — цена варьируется',
-          'services.s7.desc': 'Терапия вакуумными банками, улучшающая кровообращение, снимающая мышечное напряжение и ускоряющая процесс заживления. Цена зависит от обрабатываемой зоны.',
-          'services.s7.alt': 'Вакуумный массаж',
-          'services.s8.name': 'Акции и скидки',
-          'services.s8.desc': 'На некоторые массажи возможна скидка! Звоните для уточнения — мы подберём лучшее предложение под ваши потребности.',
-          'services.s8.alt': 'Скидки на массаж',
+          'services.s1.alt': 'Шведский массаж',
+          'services.s2.name': 'Глубокий массаж',
+          'services.s2.desc': 'Целенаправленное давление на глубокие мышечные слои для снятия хронического напряжения и облегчения постоянной боли.',
+          'services.s2.alt': 'Глубокий массаж',
+          'services.s3.name': 'Горячие камни',
+          'services.s3.desc': 'Гладкие нагретые камни, размещённые на ключевых точках, растапливают напряжение и улучшают кровообращение.',
+          'services.s3.alt': 'Терапия горячими камнями',
+          'services.s4.name': 'Ароматерапия',
+          'services.s4.desc': 'Эфирные масла в сочетании с деликатными массажными техниками для гармонии разума, тела и духа.',
+          'services.s4.alt': 'Ароматерапия',
+          'services.s5.name': 'Спортивный массаж',
+          'services.s5.desc': 'Разработан для активных людей: предотвращает травмы, повышает результативность и ускоряет восстановление.',
+          'services.s5.alt': 'Спортивный массаж',
+          'services.s6.name': 'Тайский массаж',
+          'services.s6.desc': 'Древние техники растяжки и давления для улучшения гибкости, потока энергии и жизненной силы.',
+          'services.s6.alt': 'Тайский массаж',
+          'services.s7.name': 'Массаж для пар',
+          'services.s7.desc': 'Совместный отдых в приватном номере — идеально для партнёров, ищущих покой и гармонию.',
+          'services.s7.alt': 'Массаж для пар',
+          'services.s8.name': 'Рефлексотерапия',
+          'services.s8.desc': 'Массаж стоп с воздействием на рефлекторные точки для восстановления баланса и стимуляции естественного исцеления.',
+          'services.s8.alt': 'Рефлексотерапия',
           'why.title': 'Почему выбирают нас?',
           'why.r1': 'Сертифицированные и опытные терапевты',
           'why.r2': 'Спокойная и умиротворённая атмосфера',
           'why.r3': 'Индивидуальные планы лечения',
           'why.r4': 'Органические масла и продукты премиум-класса',
           'contact.title': 'Записаться на приём',
-          'contact.subtitle': 'Свяжитесь с нами, чтобы записаться на идеальный сеанс.',
-          'contact.call': 'Звонок: +373 797 20 592',
-          'contact.whatsapp': 'WhatsApp',
+          'contact.subtitle': 'Оставьте свои данные, и мы подберём для вас идеальный сеанс.',
+          'contact.name': 'Ваше имя',
+          'contact.phone': 'Номер телефона',
+          'contact.message': 'Предпочитаемая услуга или сообщение',
+          'contact.btn': 'Записаться',
           'footer.text': '© 2026 MassageWay. Все права защищены.',
         },
       };
