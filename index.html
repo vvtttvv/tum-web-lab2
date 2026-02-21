@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Serenity Massage</title>
+    <title>MassageWay</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -22,119 +22,150 @@
         },
       }
     </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .container-main {
+          @apply max-w-[1100px] mx-auto px-5;
+        }
+        .section-title {
+          @apply text-center text-4xl font-bold;
+        }
+        .nav-link {
+          @apply no-underline text-dark font-medium transition-colors duration-300 hover:text-primary;
+        }
+        .service-card {
+          @apply bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5;
+        }
+        .card-img {
+          @apply w-[200px] h-[200px] rounded-full mx-auto;
+        }
+        .card-title {
+          @apply mb-2.5 text-primary font-semibold;
+        }
+        .why-item {
+          @apply bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center;
+        }
+        .form-input {
+          @apply p-3 rounded-[14px] border border-gray-300 text-base;
+        }
+        .btn-primary {
+          @apply bg-primary text-white rounded-full py-3.5 font-semibold transition-all duration-300 hover:bg-primary-dark;
+        }
+      }
+    </style>
   </head>
   <body class="font-[Segoe_UI,Tahoma,Geneva,Verdana,sans-serif] bg-bg-main text-dark leading-relaxed">
 
     <header class="bg-white shadow-sm sticky top-0 z-10">
-      <div class="max-w-[1100px] mx-auto px-5 flex flex-col md:flex-row items-center justify-between h-auto md:h-[70px] py-3.5 md:py-0 gap-3 md:gap-0">
+      <div class="container-main flex flex-col md:flex-row items-center justify-between h-auto md:h-[70px] py-3.5 md:py-0 gap-3 md:gap-0">
         <div class="text-xl font-bold text-primary">MassageWay</div>
 
         <nav>
           <ul class="flex flex-wrap justify-center gap-6">
-            <li><a href="#home" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">Home</a></li>
-            <li><a href="#about" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">About</a></li>
-            <li><a href="#products" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">Services</a></li>
-            <li><a href="#why-us" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">Why us</a></li>
-            <li><a href="#contact" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">Contact</a></li>
+            <li><a href="#home" class="nav-link">Acasă</a></li>
+            <li><a href="#about" class="nav-link">Despre noi</a></li>
+            <li><a href="#products" class="nav-link">Servicii</a></li>
+            <li><a href="#why-us" class="nav-link">De ce noi</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <section id="home" class="py-16 md:py-20 bg-gradient-to-br from-mint to-white text-center">
-      <div class="max-w-[1100px] mx-auto px-5">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Relax, Restore, Rejuvenate</h1>
-        <p class="max-w-[600px] mx-auto mb-8 text-muted text-lg">Professional massage therapy to help you unwind, heal, and feel your best.</p>
+      <div class="container-main">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Relaxează-te, Recuperează-te, Reînnoiește-te</h1>
+        <p class="max-w-[600px] mx-auto mb-8 text-muted text-lg">Masaj terapeutic profesional care te ajută să te destrinzi, să te vindeci și să te simți excelent.</p>
 
-        <a href="#contact" class="inline-block bg-primary text-white py-3.5 px-8 rounded-full no-underline font-semibold transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5">Book a session</a>
+        <a href="#contact" class="btn-primary inline-block px-8 no-underline hover:-translate-y-0.5">Programează o ședință</a>
       </div>
     </section>
 
     <section id="about" class="py-16 md:py-20 bg-white">
-      <div class="max-w-[1100px] mx-auto px-5">
-        <h2 class="text-center mb-6 text-4xl font-bold">About MassageWay</h2>
+      <div class="container-main">
+        <h2 class="section-title mb-6">Despre MassageWay</h2>
         <p class="max-w-[700px] mx-auto text-center text-muted text-base">
-          MassageWay is a tranquil retreat offering professional
-          massage therapy, body treatments, and holistic wellness services
-          tailored to your individual needs.
+          MassageWay este un refugiu de liniște care oferă masaj terapeutic
+          profesional, tratamente corporale și servicii holistice de wellness,
+          adaptate nevoilor tale individuale.
         </p>
       </div>
     </section>
 
     <section id="products" class="py-16 md:py-20">
-      <div class="max-w-[1100px] mx-auto px-5">
-        <h2 class="text-center mb-12 text-4xl font-bold">Our Services</h2>
+      <div class="container-main">
+        <h2 class="section-title mb-12">Serviciile noastre</h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
-            <img src="./mock/images/img1.png" alt="Swedish massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
-            <h3 class="mb-2.5 text-primary font-semibold">Swedish Massage</h3>
+          <article class="service-card">
+            <img src="./mock/images/img1.png" alt="Masaj suedez" class="card-img" />
+            <h3 class="card-title">Masaj Suedez</h3>
             <p>
-              A classic full-body massage using long, flowing strokes to promote
-              deep relaxation and stress relief.
+              Un masaj clasic pentru întreg corpul, cu mișcări lungi și fluide,
+              pentru relaxare profundă și eliminarea stresului.
             </p>
           </article>
 
-          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
-            <img src="./mock/images/img2.png" alt="Deep tissue massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
-            <h3 class="mb-2.5 text-primary font-semibold">Deep Tissue</h3>
+          <article class="service-card">
+            <img src="./mock/images/img2.png" alt="Masaj profund" class="card-img" />
+            <h3 class="card-title">Masaj Profund</h3>
             <p>
-              Targeted pressure on deeper muscle layers to release chronic
-              tension and relieve persistent pain.
+              Presiune aplicată pe straturile musculare profunde pentru a elibera
+              tensiunea cronică și a ameliora durerea persistentă.
             </p>
           </article>
 
-          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
-            <img src="./mock/images/img3.png" alt="Hot stone therapy" class="w-[200px] h-[200px] rounded-full mx-auto" />
-            <h3 class="mb-2.5 text-primary font-semibold">Hot Stone Therapy</h3>
+          <article class="service-card">
+            <img src="./mock/images/img3.png" alt="Terapie cu pietre calde" class="card-img" />
+            <h3 class="card-title">Pietre Calde</h3>
             <p>
-              Smooth heated stones placed on key points to melt away tension and
-              improve circulation.
+              Pietre netede încălzite, plasate pe puncte cheie, pentru a topi
+              tensiunea și a îmbunătăți circulația.
             </p>
           </article>
 
-          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
-            <img src="./mock/images/img4.png" alt="Aromatherapy massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
-            <h3 class="mb-2.5 text-primary font-semibold">Aromatherapy</h3>
+          <article class="service-card">
+            <img src="./mock/images/img4.png" alt="Aromaterapie" class="card-img" />
+            <h3 class="card-title">Aromaterapie</h3>
             <p>
-              Essential oils combined with gentle massage techniques to balance
-              mind, body, and spirit.
+              Uleiuri esențiale combinate cu tehnici delicate de masaj pentru a
+              echilibra mintea, corpul și spiritul.
             </p>
           </article>
 
-          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
-            <img src="./mock/images/img5.png" alt="Sports massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
-            <h3 class="mb-2.5 text-primary font-semibold">Sports Massage</h3>
+          <article class="service-card">
+            <img src="./mock/images/img5.png" alt="Masaj sportiv" class="card-img" />
+            <h3 class="card-title">Masaj Sportiv</h3>
             <p>
-              Designed for active individuals to prevent injuries, enhance
-              performance, and speed recovery.
+              Conceput pentru persoanele active, pentru a preveni accidentările,
+              a îmbunătăți performanța și a accelera recuperarea.
             </p>
           </article>
 
-          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
-            <img src="./mock/images/img6.png" alt="Thai massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
-            <h3 class="mb-2.5 text-primary font-semibold">Thai Massage</h3>
+          <article class="service-card">
+            <img src="./mock/images/img6.png" alt="Masaj thailandez" class="card-img" />
+            <h3 class="card-title">Masaj Thailandez</h3>
             <p>
-              Ancient stretching and pressure techniques to improve flexibility,
-              energy flow, and vitality.
+              Tehnici ancestrale de stretching și presiune pentru a îmbunătăți
+              flexibilitatea, fluxul de energie și vitalitatea.
             </p>
           </article>
 
-          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
-            <img src="./mock/images/img7.png" alt="Couples massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
-            <h3 class="mb-2.5 text-primary font-semibold">Couples Massage</h3>
+          <article class="service-card">
+            <img src="./mock/images/img7.png" alt="Masaj pentru cupluri" class="card-img" />
+            <h3 class="card-title">Masaj pentru Cupluri</h3>
             <p>
-              A shared relaxation experience in a private suite — perfect for
-              partners seeking tranquility together.
+              O experiență de relaxare împreună într-o suită privată — perfectă
+              pentru partenerii care caută liniște.
             </p>
           </article>
 
-          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
-            <img src="./mock/images/img8.png" alt="Reflexology session" class="w-[200px] h-[200px] rounded-full mx-auto" />
-            <h3 class="mb-2.5 text-primary font-semibold">Reflexology</h3>
+          <article class="service-card">
+            <img src="./mock/images/img8.png" alt="Reflexoterapie" class="card-img" />
+            <h3 class="card-title">Reflexoterapie</h3>
             <p>
-              Focused foot massage targeting pressure points to restore balance
-              and promote natural healing.
+              Masaj concentrat pe tălpi, vizând punctele de presiune pentru a
+              restabili echilibrul și a promova vindecarea naturală.
             </p>
           </article>
         </div>
@@ -142,37 +173,37 @@
     </section>
 
     <section id="why-us" class="py-16 md:py-20 bg-gradient-to-br from-white to-mint">
-      <div class="max-w-[1100px] mx-auto px-5">
-        <h2 class="text-center mb-10 text-4xl font-bold">Why choose us?</h2>
+      <div class="container-main">
+        <h2 class="section-title mb-10">De ce să ne alegi?</h2>
 
         <ul class="max-w-[500px] mx-auto grid gap-4">
-          <li class="bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center">Certified and experienced therapists</li>
-          <li class="bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center">Calm, serene atmosphere</li>
-          <li class="bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center">Personalized treatment plans</li>
-          <li class="bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center">Premium organic oils and products</li>
+          <li class="why-item">Terapeuți certificați și cu experiență</li>
+          <li class="why-item">Atmosferă calmă și liniștită</li>
+          <li class="why-item">Planuri de tratament personalizate</li>
+          <li class="why-item">Uleiuri și produse organice premium</li>
         </ul>
       </div>
     </section>
 
     <section id="contact" class="py-16 md:py-20 bg-white">
-      <div class="max-w-[1100px] mx-auto px-5">
-        <h2 class="text-center mb-3.5 text-4xl font-bold">Book an Appointment</h2>
+      <div class="container-main">
+        <h2 class="section-title mb-3.5">Programează o întâlnire</h2>
 
-        <p class="text-center mb-10 text-muted">Leave your details and we'll schedule your perfect session.</p>
+        <p class="text-center mb-10 text-muted">Lasă-ne datele tale și vom programa ședința perfectă pentru tine.</p>
 
         <form class="max-w-[450px] mx-auto grid gap-3.5">
-          <input type="text" placeholder="Your name" required class="p-3 rounded-[14px] border border-gray-300 text-base" />
-          <input type="tel" placeholder="Phone number" required class="p-3 rounded-[14px] border border-gray-300 text-base" />
-          <textarea placeholder="Preferred service or message" class="p-3 rounded-[14px] border border-gray-300 text-base min-h-[120px] resize-y"></textarea>
+          <input type="text" placeholder="Numele tău" required class="form-input" />
+          <input type="tel" placeholder="Număr de telefon" required class="form-input" />
+          <textarea placeholder="Serviciul preferat sau un mesaj" class="form-input min-h-[120px] resize-y"></textarea>
 
-          <button type="submit" class="bg-primary text-white rounded-full py-3.5 text-base font-semibold cursor-pointer transition-all duration-300 hover:bg-primary-dark">Book now</button>
+          <button type="submit" class="btn-primary text-base cursor-pointer">Programează acum</button>
         </form>
       </div>
     </section>
 
     <footer class="bg-white text-center py-6 border-t border-gray-200">
-      <div class="max-w-[1100px] mx-auto px-5">
-        <p class="text-muted text-sm">&copy; 2026 MassageWay. All rights reserved.</p>
+      <div class="container-main">
+        <p class="text-muted text-sm">&copy; 2026 MassageWay. Toate drepturile rezervate.</p>
       </div>
     </footer>
   </body>
