@@ -3,119 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Serenity Massage & Spa</title>
+    <title>Serenity Massage</title>
 
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#3a7d6e',
+              'primary-dark': '#2d6357',
+              dark: '#2c3e3a',
+              muted: '#6b8a80',
+              'bg-main': '#f4f9f7',
+              mint: '#dff0ea',
+            },
+          },
+        },
+      }
+    </script>
   </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo">Serenity Spa</div>
+  <body class="font-[Segoe_UI,Tahoma,Geneva,Verdana,sans-serif] bg-bg-main text-dark leading-relaxed">
+
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+      <div class="max-w-[1100px] mx-auto px-5 flex flex-col md:flex-row items-center justify-between h-auto md:h-[70px] py-3.5 md:py-0 gap-3 md:gap-0">
+        <div class="text-xl font-bold text-primary">MassageWay</div>
 
         <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Services</a></li>
-            <li><a href="#why-us">Why us</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <ul class="flex flex-wrap justify-center gap-6">
+            <li><a href="#home" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">Home</a></li>
+            <li><a href="#about" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">About</a></li>
+            <li><a href="#products" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">Services</a></li>
+            <li><a href="#why-us" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">Why us</a></li>
+            <li><a href="#contact" class="no-underline text-dark font-medium transition-colors duration-300 hover:text-primary">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section id="home">
-      <div class="container">
-        <h1>Relax, Restore, Rejuvenate</h1>
-        <p>Professional massage therapy to help you unwind, heal, and feel your best.</p>
+    <section id="home" class="py-16 md:py-20 bg-gradient-to-br from-mint to-white text-center">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Relax, Restore, Rejuvenate</h1>
+        <p class="max-w-[600px] mx-auto mb-8 text-muted text-lg">Professional massage therapy to help you unwind, heal, and feel your best.</p>
 
-        <a href="#contact" class="cta-button">Book a session</a>
+        <a href="#contact" class="inline-block bg-primary text-white py-3.5 px-8 rounded-full no-underline font-semibold transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5">Book a session</a>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container">
-        <h2>About Serenity Spa</h2>
-        <p>
-          Serenity Massage & Spa is a tranquil retreat offering professional
+    <section id="about" class="py-16 md:py-20 bg-white">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h2 class="text-center mb-6 text-4xl font-bold">About MassageWay</h2>
+        <p class="max-w-[700px] mx-auto text-center text-muted text-base">
+          MassageWay is a tranquil retreat offering professional
           massage therapy, body treatments, and holistic wellness services
           tailored to your individual needs.
         </p>
       </div>
     </section>
 
-    <section id="products">
-      <div class="container">
-        <h2>Our Services</h2>
+    <section id="products" class="py-16 md:py-20">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h2 class="text-center mb-12 text-4xl font-bold">Our Services</h2>
 
-        <div class="products-grid">
-          <article class="product-card">
-            <img src="./mock/images/img1.png" alt="Swedish massage" />
-            <h3>Swedish Massage</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <img src="./mock/images/img1.png" alt="Swedish massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
+            <h3 class="mb-2.5 text-primary font-semibold">Swedish Massage</h3>
             <p>
               A classic full-body massage using long, flowing strokes to promote
               deep relaxation and stress relief.
             </p>
           </article>
 
-          <article class="product-card">
-            <img src="./mock/images/img2.png" alt="Deep tissue massage" />
-            <h3>Deep Tissue</h3>
+          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <img src="./mock/images/img2.png" alt="Deep tissue massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
+            <h3 class="mb-2.5 text-primary font-semibold">Deep Tissue</h3>
             <p>
               Targeted pressure on deeper muscle layers to release chronic
               tension and relieve persistent pain.
             </p>
           </article>
 
-          <article class="product-card">
-            <img src="./mock/images/img3.png" alt="Hot stone therapy" />
-            <h3>Hot Stone Therapy</h3>
+          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <img src="./mock/images/img3.png" alt="Hot stone therapy" class="w-[200px] h-[200px] rounded-full mx-auto" />
+            <h3 class="mb-2.5 text-primary font-semibold">Hot Stone Therapy</h3>
             <p>
               Smooth heated stones placed on key points to melt away tension and
               improve circulation.
             </p>
           </article>
 
-          <article class="product-card">
-            <img src="./mock/images/img4.png" alt="Aromatherapy massage" />
-            <h3>Aromatherapy</h3>
+          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <img src="./mock/images/img4.png" alt="Aromatherapy massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
+            <h3 class="mb-2.5 text-primary font-semibold">Aromatherapy</h3>
             <p>
               Essential oils combined with gentle massage techniques to balance
               mind, body, and spirit.
             </p>
           </article>
 
-          <article class="product-card">
-            <img src="./mock/images/img5.png" alt="Sports massage" />
-            <h3>Sports Massage</h3>
+          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <img src="./mock/images/img5.png" alt="Sports massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
+            <h3 class="mb-2.5 text-primary font-semibold">Sports Massage</h3>
             <p>
               Designed for active individuals to prevent injuries, enhance
               performance, and speed recovery.
             </p>
           </article>
 
-          <article class="product-card">
-            <img src="./mock/images/img6.png" alt="Thai massage" />
-            <h3>Thai Massage</h3>
+          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <img src="./mock/images/img6.png" alt="Thai massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
+            <h3 class="mb-2.5 text-primary font-semibold">Thai Massage</h3>
             <p>
               Ancient stretching and pressure techniques to improve flexibility,
               energy flow, and vitality.
             </p>
           </article>
 
-          <article class="product-card">
-            <img src="./mock/images/img7.png" alt="Couples massage" />
-            <h3>Couples Massage</h3>
+          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <img src="./mock/images/img7.png" alt="Couples massage" class="w-[200px] h-[200px] rounded-full mx-auto" />
+            <h3 class="mb-2.5 text-primary font-semibold">Couples Massage</h3>
             <p>
               A shared relaxation experience in a private suite — perfect for
               partners seeking tranquility together.
             </p>
           </article>
 
-          <article class="product-card">
-            <img src="./mock/images/img8.png" alt="Reflexology session" />
-            <h3>Reflexology</h3>
+          <article class="bg-white p-6 rounded-[14px] text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5">
+            <img src="./mock/images/img8.png" alt="Reflexology session" class="w-[200px] h-[200px] rounded-full mx-auto" />
+            <h3 class="mb-2.5 text-primary font-semibold">Reflexology</h3>
             <p>
               Focused foot massage targeting pressure points to restore balance
               and promote natural healing.
@@ -125,44 +141,38 @@
       </div>
     </section>
 
-    <section id="why-us">
-      <div class="container">
-        <h2>Why choose us?</h2>
+    <section id="why-us" class="py-16 md:py-20 bg-gradient-to-br from-white to-mint">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h2 class="text-center mb-10 text-4xl font-bold">Why choose us?</h2>
 
-        <ul>
-          <li>Certified and experienced therapists</li>
-          <li>Calm, serene atmosphere</li>
-          <li>Personalized treatment plans</li>
-          <li>Premium organic oils and products</li>
+        <ul class="max-w-[500px] mx-auto grid gap-4">
+          <li class="bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center">Certified and experienced therapists</li>
+          <li class="bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center">Calm, serene atmosphere</li>
+          <li class="bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center">Personalized treatment plans</li>
+          <li class="bg-white py-3.5 px-5 rounded-[14px] shadow-md text-center">Premium organic oils and products</li>
         </ul>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="container">
-        <h2>Book an Appointment</h2>
+    <section id="contact" class="py-16 md:py-20 bg-white">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h2 class="text-center mb-3.5 text-4xl font-bold">Book an Appointment</h2>
 
-        <p>Leave your details and we'll schedule your perfect session.</p>
+        <p class="text-center mb-10 text-muted">Leave your details and we'll schedule your perfect session.</p>
 
-        <form>
-          <input type="text" placeholder="Your name" required />
-          <input type="tel" placeholder="Phone number" required />
-          <textarea placeholder="Preferred service or message"></textarea>
+        <form class="max-w-[450px] mx-auto grid gap-3.5">
+          <input type="text" placeholder="Your name" required class="p-3 rounded-[14px] border border-gray-300 text-base" />
+          <input type="tel" placeholder="Phone number" required class="p-3 rounded-[14px] border border-gray-300 text-base" />
+          <textarea placeholder="Preferred service or message" class="p-3 rounded-[14px] border border-gray-300 text-base min-h-[120px] resize-y"></textarea>
 
-          <button type="submit">Book now</button>
+          <button type="submit" class="bg-primary text-white rounded-full py-3.5 text-base font-semibold cursor-pointer transition-all duration-300 hover:bg-primary-dark">Book now</button>
         </form>
       </div>
     </section>
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2026 Serenity Massage & Spa. All rights reserved.</p>
-        <p>
-          Instagram:
-          <a href="https://www.instagram.com/serenity_spa" target="_blank">
-            @serenity_spa
-          </a>
-        </p>
+    <footer class="bg-white text-center py-6 border-t border-gray-200">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <p class="text-muted text-sm">&copy; 2026 MassageWay. All rights reserved.</p>
       </div>
     </footer>
   </body>
