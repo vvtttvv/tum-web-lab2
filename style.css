@@ -1,10 +1,10 @@
 :root {
-  --bg-main: #fff7f9;
+  --bg-main: #f4f9f7;
   --bg-section: #ffffff;
-  --color-primary: #c44569;
-  --color-secondary: #f3a0b5;
-  --color-dark: #333;
-  --color-muted: #777;
+  --color-primary: #3a7d6e;
+  --color-secondary: #7fb8a4;
+  --color-dark: #2c3e3a;
+  --color-muted: #6b8a80;
   --radius: 14px;
 }
 
@@ -66,7 +66,7 @@ nav a:hover {
 
 
 #home {
-  background: linear-gradient(135deg, #ffe6ec, #fff);
+  background: linear-gradient(135deg, #dff0ea, #fff);
   text-align: center;
 }
 
@@ -94,7 +94,7 @@ nav a:hover {
 }
 
 .cta-button:hover {
-  background: #a83757;
+  background: #2d6357;
   transform: translateY(-2px);
 }
 
@@ -150,7 +150,7 @@ nav a:hover {
 
 
 #why-us {
-  background: linear-gradient(135deg, #fff, #ffe6ec);
+  background: linear-gradient(135deg, #fff, #dff0ea);
 }
 
 #why-us h2 {
@@ -225,7 +225,7 @@ button {
 }
 
 button:hover {
-  background: #a83757;
+  background: #2d6357;
 }
 
 
