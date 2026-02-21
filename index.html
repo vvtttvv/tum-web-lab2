@@ -3,7 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MassageWay</title>
+    <title>MassageWay - Masaj Terapeutic Profesional</title>
+
+    <meta name="description" content="MassageWay — salon de masaj terapeutic profesional. Masaj suedez, profund, cu pietre calde, aromaterapie și multe altele. Programează o ședință acum!" />
+    <meta name="keywords" content="masaj, masaj terapeutic, relaxare, wellness, masaj suedez, masaj profund, aromaterapie, reflexoterapie" />
+    <meta name="author" content="MassageWay" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MassageWay — Masaj Terapeutic Profesional" />
+    <meta property="og:description" content="Relaxează-te, recuperează-te, reînnoiește-te. Masaj profesional adaptat nevoilor tale." />
+    <meta property="og:image" content="./mock/images/img1.png" />
+    <meta property="og:url" content="https://massageway.md" />
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💆</text></svg>" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -51,6 +65,15 @@
         .btn-primary {
           @apply bg-primary text-white rounded-full py-3.5 font-semibold transition-all duration-300 hover:bg-primary-dark;
         }
+        .lang-btn {
+          @apply text-sm font-semibold px-2 py-1 rounded transition-colors duration-200 cursor-pointer bg-transparent border-none;
+        }
+        .lang-btn-active {
+          @apply text-primary;
+        }
+        .lang-btn:not(.lang-btn-active) {
+          @apply text-muted hover:text-dark;
+        }
       }
     </style>
   </head>
@@ -60,31 +83,37 @@
       <div class="container-main flex flex-col md:flex-row items-center justify-between h-auto md:h-[70px] py-3.5 md:py-0 gap-3 md:gap-0">
         <div class="text-xl font-bold text-primary">MassageWay</div>
 
-        <nav>
+        <nav class="flex items-center gap-6">
           <ul class="flex flex-wrap justify-center gap-6">
-            <li><a href="#home" class="nav-link">Acasă</a></li>
-            <li><a href="#about" class="nav-link">Despre noi</a></li>
-            <li><a href="#products" class="nav-link">Servicii</a></li>
-            <li><a href="#why-us" class="nav-link">De ce noi</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#home" class="nav-link" data-i18n="nav.home">Acasă</a></li>
+            <li><a href="#about" class="nav-link" data-i18n="nav.about">Despre noi</a></li>
+            <li><a href="#products" class="nav-link" data-i18n="nav.services">Servicii</a></li>
+            <li><a href="#why-us" class="nav-link" data-i18n="nav.why">De ce noi</a></li>
+            <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
           </ul>
+
+          <div class="flex items-center gap-1 ml-2">
+            <button onclick="setLang('ro')" id="btn-ro" class="lang-btn lang-btn-active" title="Română">RO</button>
+            <span class="text-gray-300">|</span>
+            <button onclick="setLang('ru')" id="btn-ru" class="lang-btn" title="Русский">RU</button>
+          </div>
         </nav>
       </div>
     </header>
 
     <section id="home" class="py-16 md:py-20 bg-gradient-to-br from-mint to-white text-center">
       <div class="container-main">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Relaxează-te, Recuperează-te, Reînnoiește-te</h1>
-        <p class="max-w-[600px] mx-auto mb-8 text-muted text-lg">Masaj terapeutic profesional care te ajută să te destrinzi, să te vindeci și să te simți excelent.</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="hero.title">Relaxează-te, Recuperează-te, Reînnoiește-te</h1>
+        <p class="max-w-[600px] mx-auto mb-8 text-muted text-lg" data-i18n="hero.subtitle">Masaj terapeutic profesional care te ajută să te destrinzi, să te vindeci și să te simți excelent.</p>
 
-        <a href="#contact" class="btn-primary inline-block px-8 no-underline hover:-translate-y-0.5">Programează o ședință</a>
+        <a href="#contact" class="btn-primary inline-block px-8 no-underline hover:-translate-y-0.5" data-i18n="hero.cta">Programează o ședință</a>
       </div>
     </section>
 
     <section id="about" class="py-16 md:py-20 bg-white">
       <div class="container-main">
-        <h2 class="section-title mb-6">Despre MassageWay</h2>
-        <p class="max-w-[700px] mx-auto text-center text-muted text-base">
+        <h2 class="section-title mb-6" data-i18n="about.title">Despre MassageWay</h2>
+        <p class="max-w-[700px] mx-auto text-center text-muted text-base" data-i18n="about.text">
           MassageWay este un refugiu de liniște care oferă masaj terapeutic
           profesional, tratamente corporale și servicii holistice de wellness,
           adaptate nevoilor tale individuale.
@@ -94,76 +123,76 @@
 
     <section id="products" class="py-16 md:py-20">
       <div class="container-main">
-        <h2 class="section-title mb-12">Serviciile noastre</h2>
+        <h2 class="section-title mb-12" data-i18n="services.title">Serviciile noastre</h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <article class="service-card">
-            <img src="./mock/images/img1.png" alt="Masaj suedez" class="card-img" />
-            <h3 class="card-title">Masaj Suedez</h3>
-            <p>
+            <img src="./mock/images/img1.png" alt="Masaj suedez" class="card-img" data-i18n-alt="services.s1.alt" />
+            <h3 class="card-title" data-i18n="services.s1.name">Masaj Suedez</h3>
+            <p data-i18n="services.s1.desc">
               Un masaj clasic pentru întreg corpul, cu mișcări lungi și fluide,
               pentru relaxare profundă și eliminarea stresului.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img2.png" alt="Masaj profund" class="card-img" />
-            <h3 class="card-title">Masaj Profund</h3>
-            <p>
+            <img src="./mock/images/img2.png" alt="Masaj profund" class="card-img" data-i18n-alt="services.s2.alt" />
+            <h3 class="card-title" data-i18n="services.s2.name">Masaj Profund</h3>
+            <p data-i18n="services.s2.desc">
               Presiune aplicată pe straturile musculare profunde pentru a elibera
               tensiunea cronică și a ameliora durerea persistentă.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img3.png" alt="Terapie cu pietre calde" class="card-img" />
-            <h3 class="card-title">Pietre Calde</h3>
-            <p>
+            <img src="./mock/images/img3.png" alt="Terapie cu pietre calde" class="card-img" data-i18n-alt="services.s3.alt" />
+            <h3 class="card-title" data-i18n="services.s3.name">Pietre Calde</h3>
+            <p data-i18n="services.s3.desc">
               Pietre netede încălzite, plasate pe puncte cheie, pentru a topi
               tensiunea și a îmbunătăți circulația.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img4.png" alt="Aromaterapie" class="card-img" />
-            <h3 class="card-title">Aromaterapie</h3>
-            <p>
+            <img src="./mock/images/img4.png" alt="Aromaterapie" class="card-img" data-i18n-alt="services.s4.alt" />
+            <h3 class="card-title" data-i18n="services.s4.name">Aromaterapie</h3>
+            <p data-i18n="services.s4.desc">
               Uleiuri esențiale combinate cu tehnici delicate de masaj pentru a
               echilibra mintea, corpul și spiritul.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img5.png" alt="Masaj sportiv" class="card-img" />
-            <h3 class="card-title">Masaj Sportiv</h3>
-            <p>
+            <img src="./mock/images/img5.png" alt="Masaj sportiv" class="card-img" data-i18n-alt="services.s5.alt" />
+            <h3 class="card-title" data-i18n="services.s5.name">Masaj Sportiv</h3>
+            <p data-i18n="services.s5.desc">
               Conceput pentru persoanele active, pentru a preveni accidentările,
               a îmbunătăți performanța și a accelera recuperarea.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img6.png" alt="Masaj thailandez" class="card-img" />
-            <h3 class="card-title">Masaj Thailandez</h3>
-            <p>
+            <img src="./mock/images/img6.png" alt="Masaj thailandez" class="card-img" data-i18n-alt="services.s6.alt" />
+            <h3 class="card-title" data-i18n="services.s6.name">Masaj Thailandez</h3>
+            <p data-i18n="services.s6.desc">
               Tehnici ancestrale de stretching și presiune pentru a îmbunătăți
               flexibilitatea, fluxul de energie și vitalitatea.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img7.png" alt="Masaj pentru cupluri" class="card-img" />
-            <h3 class="card-title">Masaj pentru Cupluri</h3>
-            <p>
+            <img src="./mock/images/img7.png" alt="Masaj pentru cupluri" class="card-img" data-i18n-alt="services.s7.alt" />
+            <h3 class="card-title" data-i18n="services.s7.name">Masaj pentru Cupluri</h3>
+            <p data-i18n="services.s7.desc">
               O experiență de relaxare împreună într-o suită privată — perfectă
               pentru partenerii care caută liniște.
             </p>
           </article>
 
           <article class="service-card">
-            <img src="./mock/images/img8.png" alt="Reflexoterapie" class="card-img" />
-            <h3 class="card-title">Reflexoterapie</h3>
-            <p>
+            <img src="./mock/images/img8.png" alt="Reflexoterapie" class="card-img" data-i18n-alt="services.s8.alt" />
+            <h3 class="card-title" data-i18n="services.s8.name">Reflexoterapie</h3>
+            <p data-i18n="services.s8.desc">
               Masaj concentrat pe tălpi, vizând punctele de presiune pentru a
               restabili echilibrul și a promova vindecarea naturală.
             </p>
@@ -174,37 +203,172 @@
 
     <section id="why-us" class="py-16 md:py-20 bg-gradient-to-br from-white to-mint">
       <div class="container-main">
-        <h2 class="section-title mb-10">De ce să ne alegi?</h2>
+        <h2 class="section-title mb-10" data-i18n="why.title">De ce să ne alegi?</h2>
 
         <ul class="max-w-[500px] mx-auto grid gap-4">
-          <li class="why-item">Terapeuți certificați și cu experiență</li>
-          <li class="why-item">Atmosferă calmă și liniștită</li>
-          <li class="why-item">Planuri de tratament personalizate</li>
-          <li class="why-item">Uleiuri și produse organice premium</li>
+          <li class="why-item" data-i18n="why.r1">Terapeuți certificați și cu experiență</li>
+          <li class="why-item" data-i18n="why.r2">Atmosferă calmă și liniștită</li>
+          <li class="why-item" data-i18n="why.r3">Planuri de tratament personalizate</li>
+          <li class="why-item" data-i18n="why.r4">Uleiuri și produse organice premium</li>
         </ul>
       </div>
     </section>
 
     <section id="contact" class="py-16 md:py-20 bg-white">
       <div class="container-main">
-        <h2 class="section-title mb-3.5">Programează o întâlnire</h2>
+        <h2 class="section-title mb-3.5" data-i18n="contact.title">Programează o întâlnire</h2>
 
-        <p class="text-center mb-10 text-muted">Lasă-ne datele tale și vom programa ședința perfectă pentru tine.</p>
+        <p class="text-center mb-10 text-muted" data-i18n="contact.subtitle">Lasă-ne datele tale și vom programa ședința perfectă pentru tine.</p>
 
         <form class="max-w-[450px] mx-auto grid gap-3.5">
-          <input type="text" placeholder="Numele tău" required class="form-input" />
-          <input type="tel" placeholder="Număr de telefon" required class="form-input" />
-          <textarea placeholder="Serviciul preferat sau un mesaj" class="form-input min-h-[120px] resize-y"></textarea>
+          <input type="text" placeholder="Numele tău" required class="form-input" data-i18n-placeholder="contact.name" />
+          <input type="tel" placeholder="Număr de telefon" required class="form-input" data-i18n-placeholder="contact.phone" />
+          <textarea placeholder="Serviciul preferat sau un mesaj" class="form-input min-h-[120px] resize-y" data-i18n-placeholder="contact.message"></textarea>
 
-          <button type="submit" class="btn-primary text-base cursor-pointer">Programează acum</button>
+          <button type="submit" class="btn-primary text-base cursor-pointer" data-i18n="contact.btn">Programează acum</button>
         </form>
       </div>
     </section>
 
     <footer class="bg-white text-center py-6 border-t border-gray-200">
       <div class="container-main">
-        <p class="text-muted text-sm">&copy; 2026 MassageWay. Toate drepturile rezervate.</p>
+        <p class="text-muted text-sm" data-i18n="footer.text">&copy; 2026 MassageWay. Toate drepturile rezervate.</p>
       </div>
     </footer>
+
+    <script>
+      const translations = {
+        ro: {
+          'nav.home': 'Acasă',
+          'nav.about': 'Despre noi',
+          'nav.services': 'Servicii',
+          'nav.why': 'De ce noi',
+          'nav.contact': 'Contact',
+          'hero.title': 'Relaxează-te, Recuperează-te, Reînnoiește-te',
+          'hero.subtitle': 'Masaj terapeutic profesional care te ajută să te destrinzi, să te vindeci și să te simți excelent.',
+          'hero.cta': 'Programează o ședință',
+          'about.title': 'Despre MassageWay',
+          'about.text': 'MassageWay este un refugiu de liniște care oferă masaj terapeutic profesional, tratamente corporale și servicii holistice de wellness, adaptate nevoilor tale individuale.',
+          'services.title': 'Serviciile noastre',
+          'services.s1.name': 'Masaj Suedez',
+          'services.s1.desc': 'Un masaj clasic pentru întreg corpul, cu mișcări lungi și fluide, pentru relaxare profundă și eliminarea stresului.',
+          'services.s1.alt': 'Masaj suedez',
+          'services.s2.name': 'Masaj Profund',
+          'services.s2.desc': 'Presiune aplicată pe straturile musculare profunde pentru a elibera tensiunea cronică și a ameliora durerea persistentă.',
+          'services.s2.alt': 'Masaj profund',
+          'services.s3.name': 'Pietre Calde',
+          'services.s3.desc': 'Pietre netede încălzite, plasate pe puncte cheie, pentru a topi tensiunea și a îmbunătăți circulația.',
+          'services.s3.alt': 'Terapie cu pietre calde',
+          'services.s4.name': 'Aromaterapie',
+          'services.s4.desc': 'Uleiuri esențiale combinate cu tehnici delicate de masaj pentru a echilibra mintea, corpul și spiritul.',
+          'services.s4.alt': 'Aromaterapie',
+          'services.s5.name': 'Masaj Sportiv',
+          'services.s5.desc': 'Conceput pentru persoanele active, pentru a preveni accidentările, a îmbunătăți performanța și a accelera recuperarea.',
+          'services.s5.alt': 'Masaj sportiv',
+          'services.s6.name': 'Masaj Thailandez',
+          'services.s6.desc': 'Tehnici ancestrale de stretching și presiune pentru a îmbunătăți flexibilitatea, fluxul de energie și vitalitatea.',
+          'services.s6.alt': 'Masaj thailandez',
+          'services.s7.name': 'Masaj pentru Cupluri',
+          'services.s7.desc': 'O experiență de relaxare împreună într-o suită privată — perfectă pentru partenerii care caută liniște.',
+          'services.s7.alt': 'Masaj pentru cupluri',
+          'services.s8.name': 'Reflexoterapie',
+          'services.s8.desc': 'Masaj concentrat pe tălpi, vizând punctele de presiune pentru a restabili echilibrul și a promova vindecarea naturală.',
+          'services.s8.alt': 'Reflexoterapie',
+          'why.title': 'De ce să ne alegi?',
+          'why.r1': 'Terapeuți certificați și cu experiență',
+          'why.r2': 'Atmosferă calmă și liniștită',
+          'why.r3': 'Planuri de tratament personalizate',
+          'why.r4': 'Uleiuri și produse organice premium',
+          'contact.title': 'Programează o întâlnire',
+          'contact.subtitle': 'Lasă-ne datele tale și vom programa ședința perfectă pentru tine.',
+          'contact.name': 'Numele tău',
+          'contact.phone': 'Număr de telefon',
+          'contact.message': 'Serviciul preferat sau un mesaj',
+          'contact.btn': 'Programează acum',
+          'footer.text': '© 2026 MassageWay. Toate drepturile rezervate.',
+        },
+        ru: {
+          'nav.home': 'Главная',
+          'nav.about': 'О нас',
+          'nav.services': 'Услуги',
+          'nav.why': 'Почему мы',
+          'nav.contact': 'Контакты',
+          'hero.title': 'Расслабься, Восстановись, Обновись',
+          'hero.subtitle': 'Профессиональный лечебный массаж, который поможет вам расслабиться, исцелиться и почувствовать себя превосходно.',
+          'hero.cta': 'Записаться на сеанс',
+          'about.title': 'О MassageWay',
+          'about.text': 'MassageWay — это тихий уголок, предлагающий профессиональный лечебный массаж, процедуры для тела и холистические велнес-услуги, адаптированные под ваши индивидуальные потребности.',
+          'services.title': 'Наши услуги',
+          'services.s1.name': 'Шведский массаж',
+          'services.s1.desc': 'Классический массаж всего тела с длинными плавными движениями для глубокого расслабления и снятия стресса.',
+          'services.s1.alt': 'Шведский массаж',
+          'services.s2.name': 'Глубокий массаж',
+          'services.s2.desc': 'Целенаправленное давление на глубокие мышечные слои для снятия хронического напряжения и облегчения постоянной боли.',
+          'services.s2.alt': 'Глубокий массаж',
+          'services.s3.name': 'Горячие камни',
+          'services.s3.desc': 'Гладкие нагретые камни, размещённые на ключевых точках, растапливают напряжение и улучшают кровообращение.',
+          'services.s3.alt': 'Терапия горячими камнями',
+          'services.s4.name': 'Ароматерапия',
+          'services.s4.desc': 'Эфирные масла в сочетании с деликатными массажными техниками для гармонии разума, тела и духа.',
+          'services.s4.alt': 'Ароматерапия',
+          'services.s5.name': 'Спортивный массаж',
+          'services.s5.desc': 'Разработан для активных людей: предотвращает травмы, повышает результативность и ускоряет восстановление.',
+          'services.s5.alt': 'Спортивный массаж',
+          'services.s6.name': 'Тайский массаж',
+          'services.s6.desc': 'Древние техники растяжки и давления для улучшения гибкости, потока энергии и жизненной силы.',
+          'services.s6.alt': 'Тайский массаж',
+          'services.s7.name': 'Массаж для пар',
+          'services.s7.desc': 'Совместный отдых в приватном номере — идеально для партнёров, ищущих покой и гармонию.',
+          'services.s7.alt': 'Массаж для пар',
+          'services.s8.name': 'Рефлексотерапия',
+          'services.s8.desc': 'Массаж стоп с воздействием на рефлекторные точки для восстановления баланса и стимуляции естественного исцеления.',
+          'services.s8.alt': 'Рефлексотерапия',
+          'why.title': 'Почему выбирают нас?',
+          'why.r1': 'Сертифицированные и опытные терапевты',
+          'why.r2': 'Спокойная и умиротворённая атмосфера',
+          'why.r3': 'Индивидуальные планы лечения',
+          'why.r4': 'Органические масла и продукты премиум-класса',
+          'contact.title': 'Записаться на приём',
+          'contact.subtitle': 'Оставьте свои данные, и мы подберём для вас идеальный сеанс.',
+          'contact.name': 'Ваше имя',
+          'contact.phone': 'Номер телефона',
+          'contact.message': 'Предпочитаемая услуга или сообщение',
+          'contact.btn': 'Записаться',
+          'footer.text': '© 2026 MassageWay. Все права защищены.',
+        },
+      };
+
+      function setLang(lang) {
+        document.documentElement.lang = lang;
+
+        const dict = translations[lang];
+        if (!dict) return;
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) el.textContent = dict[key];
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (dict[key]) el.placeholder = dict[key];
+        });
+
+        document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+          const key = el.getAttribute('data-i18n-alt');
+          if (dict[key]) el.alt = dict[key];
+        });
+
+        document.getElementById('btn-ro').classList.toggle('lang-btn-active', lang === 'ro');
+        document.getElementById('btn-ru').classList.toggle('lang-btn-active', lang === 'ru');
+
+        localStorage.setItem('lang', lang);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem('lang');
+        if (saved && saved !== 'ro') setLang(saved);
+      });
+    </script>
   </body>
 </html>
