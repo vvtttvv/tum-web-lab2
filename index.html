@@ -434,9 +434,9 @@
 
     <style>
       @keyframes mascotEntrance {
-        0%   { opacity: 0; transform: translateY(80px) scale(0.5); }
+        0%   { opacity: 0; transform: translateY(80px) scale(0.5); pointer-events: none; }
         60%  { opacity: 1; transform: translateY(-10px) scale(1.05); }
-        100% { opacity: 1; transform: translateY(0) scale(1); }
+        100% { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
       }
       @keyframes mascotFloat {
         0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -470,13 +470,10 @@
         cursor: pointer;
         filter: drop-shadow(0 4px 12px rgba(58,125,110,.35));
         transition: filter 0.3s;
+        animation: mascotEntrance 0.8s cubic-bezier(.34,1.56,.64,1) 2.5s forwards;
       }
-      #mascot-container.visible {
-        pointer-events: auto;
-        animation: mascotEntrance 0.8s cubic-bezier(.34,1.56,.64,1) forwards;
-      }
-      #mascot-container.visible .mascot-svg {
-        animation: mascotFloat 3s ease-in-out infinite;
+      #mascot-container .mascot-svg {
+        animation: mascotFloat 3s ease-in-out 3.3s infinite;
       }
       #mascot-container:hover .mascot-svg {
         animation: mascotWiggle 0.6s ease-in-out;
@@ -614,10 +611,6 @@
     </div>
 
     <script>
-      setTimeout(() => {
-        document.getElementById('mascot-container').classList.add('visible');
-      }, 2500);
-
       document.getElementById('mascot-container').addEventListener('click', function(e) {
         if (e.target.id === 'mascot-close' || e.target.closest('#mascot-close')) return;
         document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
