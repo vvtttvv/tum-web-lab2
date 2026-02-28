@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MassageWay - Masaj Terapeutic Profesional</title>
 
-    <meta name="description" content="MassageWay — salon de masaj terapeutic profesional. Masaj clasic, curativ, terapeutic, anticelulitic, cu miere, creol, cu ventuze. Programează o ședință acum!" />
-    <meta name="keywords" content="masaj, masaj terapeutic, masaj clasic, masaj curativ, masaj anticelulitic, masaj cu miere, masaj creol, masaj cu ventuze, relaxare, wellness" />
+    <meta name="description" content="MassageWay — salon de masaj terapeutic profesional. Masaj clasic, curativ, terapeutic, anticelulitic, cu miere, creol, cu ventuze. Programează o ședință acum! | MassageWay — салон профессионального лечебного массажа. Классический, лечебный, терапевтический, антицеллюлитный массаж, массаж с мёдом, креольский, вакуумный. Запишитесь на сеанс!" />
+    <meta name="keywords" content="masaj, masaj terapeutic, masaj clasic, masaj curativ, masaj anticelulitic, masaj cu miere, masaj creol, masaj cu ventuze, relaxare, wellness, массаж, лечебный массаж, классический массаж, терапевтический массаж, антицеллюлитный массаж, массаж с мёдом, креольский массаж, вакуумный массаж, расслабление, велнес, массаж Кишинёв, массаж на дому" />
     <meta name="author" content="MassageWay" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="MassageWay — Masaj La Domiciliu Profesional" />
-    <meta property="og:description" content="MassageWay — masaj terapeutic profesional. Masaj clasic, curativ, terapeutic, anticelulitic, cu miere, creol, cu ventuze. Programează o ședință acum! Masaj la domiciliu" />
+    <meta property="og:title" content="MassageWay — Masaj La Domiciliu Profesional | Массаж на дому" />
+    <meta property="og:description" content="MassageWay — masaj terapeutic profesional. Masaj clasic, curativ, terapeutic, anticelulitic, cu miere, creol, cu ventuze. Programează o ședință acum! | Профессиональный лечебный массаж в Кишинёве. Классический, лечебный, терапевтический, антицеллюлитный, с мёдом, креольский, вакуумный. Запишитесь!" />
     <meta property="og:image" content="./mock/images/img1.png" />
     <meta property="og:url" content="https://massageway.md" />
     <meta property="og:locale" content="ro_RO" />
@@ -391,11 +391,37 @@
         },
       };
 
+      const seoMeta = {
+        ro: {
+          title: 'MassageWay - Masaj Terapeutic Profesional',
+          description: 'MassageWay — salon de masaj terapeutic profesional. Masaj clasic, curativ, terapeutic, anticelulitic, cu miere, creol, cu ventuze. Programează o ședință acum!',
+          ogTitle: 'MassageWay — Masaj La Domiciliu Profesional',
+          ogDescription: 'MassageWay — masaj terapeutic profesional. Masaj clasic, curativ, terapeutic, anticelulitic, cu miere, creol, cu ventuze. Programează o ședință acum! Masaj la domiciliu',
+          ogLocale: 'ro_RO',
+        },
+        ru: {
+          title: 'MassageWay - Профессиональный лечебный массаж',
+          description: 'MassageWay — салон профессионального лечебного массажа в Кишинёве. Классический, лечебный, терапевтический, антицеллюлитный массаж, массаж с мёдом, креольский, вакуумный. Запишитесь на сеанс!',
+          ogTitle: 'MassageWay — Профессиональный массаж на дому',
+          ogDescription: 'MassageWay — профессиональный лечебный массаж. Классический, лечебный, терапевтический, антицеллюлитный, с мёдом, креольский, вакуумный. Запишитесь на сеанс!',
+          ogLocale: 'ru_RU',
+        },
+      };
+
       function setLang(lang) {
         document.documentElement.lang = lang;
 
         const dict = translations[lang];
         if (!dict) return;
+
+        const meta = seoMeta[lang];
+        if (meta) {
+          document.title = meta.title;
+          document.querySelector('meta[name="description"]').setAttribute('content', meta.description);
+          document.querySelector('meta[property="og:title"]').setAttribute('content', meta.ogTitle);
+          document.querySelector('meta[property="og:description"]').setAttribute('content', meta.ogDescription);
+          document.querySelector('meta[property="og:locale"]').setAttribute('content', meta.ogLocale);
+        }
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
